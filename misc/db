@@ -1,0 +1,57 @@
+INSERT INTO `store`.`client`
+(`id`,
+`username`,
+`first_name`,
+`last_name`,
+`phone`,
+`password`,
+`roles`)
+VALUES
+(10,
+"edu",
+"Edu",
+"Dumistracel",
+"077239421",
+"$2a$12$UY71KhCIVeJqk.XAsZN1bup5E9bxFTtqaaC.wse1rYVTANx4EgoKi",
+"admin"
+);
+
+INSERT INTO `store`.`client`
+(`id`,
+`username`,
+`first_name`,
+`last_name`,
+`phone`,
+`password`,
+`roles`)
+VALUES
+(11,
+"edu1",
+"Edu",
+"Dumistracel",
+"077239421",
+"$2a$12$x6bVADevXZAM/F1qp4UxWeAwjIZuRF1uZMq4rEdqWLb.LWyeZeLbK",
+"user"
+);
+
+INSERT INTO `store`.`oders`
+(`id`,
+`customer_id`,
+`order_date`,
+`shipped_order`)
+VALUES
+(10,
+10,
+"2/5/2023",
+"4/5/2023");
+
+INSERT INTO `store`.`oders`
+(`id`,
+`customer_id`,
+`order_date`,
+`shipped_order`)
+VALUES
+(11,
+11,
+"2/5/2023",
+"4/5/2023");
