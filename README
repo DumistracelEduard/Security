@@ -9,7 +9,7 @@ http://localhost:8082/orders?placedBy=edu
 http://localhost:8082/orders?placedBy=edu1
 
 Pt orders pt cel conectat:
-http://localhost:8082/orders1
+http://localhost:8082/orders
 
 Pt add order:
 http://localhost:8082/order/place/{username}
