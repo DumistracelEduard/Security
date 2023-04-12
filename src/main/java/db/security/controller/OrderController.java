@@ -12,6 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 @RestController
@@ -21,8 +22,10 @@ public class OrderController {
 
     @GetMapping("/orders")
     @PreAuthorize("hasAuthority('admin')")
-    public List<Order> findAllOrderByUsername(@RequestParam(name = "placedBy") String username) {
-        return ordersService.findAllOrderByCustomerUsername(username);
+    public ModelAndView findAllOrderByUsername(@RequestParam(name = "placedBy") String username) {
+        ModelAndView modelAndView = new ModelAndView("result.html");
+        modelAndView.addObject("orders", ordersService.findAllOrderByCustomerUsername(username));
+        return modelAndView;
     }
 
     @PostMapping("/orders")

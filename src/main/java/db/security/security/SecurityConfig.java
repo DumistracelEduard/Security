@@ -48,7 +48,7 @@ public class SecurityConfig {
                 .requestMatchers("/order/place").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .formLogin().permitAll()
+                .formLogin().permitAll().defaultSuccessUrl("/home.html")
                 .and()
                 .exceptionHandling().accessDeniedPage("/403");
         return http.build();

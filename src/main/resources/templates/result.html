@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title th:text="Result"> </title>
+</head>
+<body>
+<ul>
+    <li th:each="order: ${orders}">
+        <span th:text ="${order.id}"></span>
+    </li>
+</ul>
+</body>
+</html>
